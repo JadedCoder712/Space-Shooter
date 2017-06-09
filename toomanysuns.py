@@ -33,6 +33,14 @@ class Sun(Sprite):
         self.vy=0.5
         self.vr=0
     
+class Thomas(Sprite):
+    engine = ImageAsset("images/thomas.gif")
+    
+    def __init__(self, position):
+        super().__init__(Thomas.engine, position)
+        self.fxcenter = self.fycenter = 0.5
+
+
 class Bounce(Sprite):
     
     sun=ImageAsset("images/fidgetspibber.png")
@@ -198,7 +206,7 @@ class SpaceGame(App):
         Bounce((550, 550))
         Bounce((650, 350))
         Bounce((40, 250))
-        
+        Thomas((500,250))
         
         
         
